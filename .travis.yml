@@ -1,0 +1,14 @@
+language: ruby
+
+rvm:
+  - 2.7
+
+branches:
+  only:
+    - master
+    - /CBB-\d*-/
+
+jobs:
+  include:
+    - name: "Test"
+      script: bundle exec rspec
